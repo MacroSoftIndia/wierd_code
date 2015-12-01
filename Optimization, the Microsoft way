@@ -1,0 +1,19 @@
+
+
+This was found in the 2004 leaked Windows sources
+
+__inline BOOL
+SearchOneDirectory(
+                  IN  LPSTR Directory,
+                  IN  LPSTR FileToFind,
+                  IN  LPSTR SourceFullName,
+                  IN  LPSTR SourceFilePart,
+                  OUT PBOOL FoundInTree
+                  )
+{
+    //
+    // This was way too slow. Just say we didn't find the file.
+    //
+    *FoundInTree = FALSE;
+    return(TRUE);
+}
