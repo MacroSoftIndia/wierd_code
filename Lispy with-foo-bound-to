@@ -1,0 +1,11 @@
+
+#define within(obj) for(QWidget *__t = (obj), *parent = __t; parent; parent=0)
+
+within(this) {
+  within(new QSplitter(parent)) {
+     within(new QVBoxWidget(parent)) { 
+       ...
+       ...
+     }
+     within(...) {
+  ...
